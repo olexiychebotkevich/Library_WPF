@@ -13,7 +13,7 @@
         </Grid.RowDefinitions>
         
         <Menu Height="20" Width="800" Grid.Row="0">
-        <MenuItem Width="50" Height="20"  Header="Add" Click="AddBook_Click" />
+        <MenuItem Width="50" Height="20"  Header="Add" Click="AddBook_Click"   />
         </Menu>
 
         <ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled" Name="view" HorizontalContentAlignment="Center" Grid.Row="1">

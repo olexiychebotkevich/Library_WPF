@@ -25,9 +25,10 @@ namespace WpfApp1
         public Book _book;
         string image;
         string file;
-        public Add_Book_Viev()
+        public Add_Book_Viev(List<string> genre )
         {
             InitializeComponent();
+            Genre.ItemsSource = genre;
             
         }
 

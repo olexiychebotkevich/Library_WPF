@@ -8,6 +8,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -21,7 +22,7 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
-        ObservableCollection<string> genre = new ObservableCollection<string>();
+        List<string> genre = new List<string>();
         Book book = new Book();
         public MainWindow()
         {
@@ -47,13 +48,12 @@ namespace WpfApp1
         private void AddBook_Click(object sender, RoutedEventArgs e)
         {
 
-            Add_Book_Viev addb = new Add_Book_Viev();
+            Add_Book_Viev addb = new Add_Book_Viev(genre);
             addb.ShowDialog();
-            if(addb._book!=null)
-            {
+
                 book = addb._book;
-                ListView1.Items.Add(book);
-            }
+                view.Items.Add(book);
+           
 
         }
 
@@ -65,6 +65,11 @@ namespace WpfApp1
         private void ListView1_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             ReaderView rw = new ReaderView(book.filePuth);
+        }
+
+        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
