@@ -20,9 +20,23 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<string> genre = new List<string>();
+        
         public MainWindow()
         {
             InitializeComponent();
+            genre.Add("novel");
+            genre.Add("story");
+            genre.Add("short story");
+            genre.Add("epic");
+            genre.Add("tale");
+            genre.Add("fable");
+            genre.Add("legend");
+            genre.Add("novelette");
+
+            
+
+
         }
     }
 }
