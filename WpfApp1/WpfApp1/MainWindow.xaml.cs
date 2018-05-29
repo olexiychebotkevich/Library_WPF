@@ -34,10 +34,7 @@ namespace WpfApp1
             genre.Add("legend");
             genre.Add("novelette");
 
-            Add_Book_Viev v = new Add_Book_Viev();
-            v.ShowDialog();
-            Book add = v._book;
-
+            
 
         }
     }
