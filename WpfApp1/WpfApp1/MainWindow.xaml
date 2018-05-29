@@ -17,6 +17,7 @@
             </Menu>
         </WrapPanel>
         <ListView Grid.Row="1" Name="ListView1" SelectionChanged="ListView1_SelectionChanged" MouseDoubleClick="ListView1_MouseDoubleClick">
+       
         </ListView>
     </Grid>
 </Window>
