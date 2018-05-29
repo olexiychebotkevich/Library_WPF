@@ -11,12 +11,28 @@
             <RowDefinition Height="20"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-            <WrapPanel Grid.Row="0" >
-            <Menu Height="20" Width="800">
-                <MenuItem Width="50" Height="20"  Header="Add" Click="AddBook_Click" />
-            </Menu>
-        </WrapPanel>
-        <ListView Grid.Row="1" Name="ListView1" SelectionChanged="ListView1_SelectionChanged" MouseDoubleClick="ListView1_MouseDoubleClick">
+        
+        <Menu Height="20" Width="800" Grid.Row="0">
+        <MenuItem Width="50" Height="20"  Header="Add" Click="AddBook_Click" />
+        </Menu>
+
+        <ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled" Name="view" HorizontalContentAlignment="Center" Grid.Row="1">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel HorizontalAlignment="Center"></WrapPanel>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="5" Background="Aqua" Height="350" Width="275">
+                        <Image HorizontalAlignment="Center" Source="{Binding Path=ImagePath}" Height="250" Width="250" />
+                        <TextBlock HorizontalAlignment="Center" FontSize="30" Text="{Binding Path=Name}"/>
+                        <TextBlock HorizontalAlignment="Center" FontSize="25" Text="{Binding Path=Author}"/>
+                        <TextBlock IsEnabled="False" HorizontalAlignment="Center"  Text="{Binding Path=Genre}"/>
+                       
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
         </ListView>
     </Grid>
 </Window>

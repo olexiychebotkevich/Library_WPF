@@ -21,12 +21,15 @@ namespace WpfApp1
     /// </summary>
     public partial class ReaderView : Window
     {
-        Book b = new Book();
-        public ReaderView(Book book)
+        string b;
+        public ReaderView(string book)
         {       
             InitializeComponent();
             b = book;
         }
+
+
+        
 
 
         
