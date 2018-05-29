@@ -64,7 +64,7 @@ namespace WpfApp1
 
         private void ListView1_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            ReaderView rw = new ReaderView(book);
+            ReaderView rw = new ReaderView(book.filePuth);
         }
     }
 }

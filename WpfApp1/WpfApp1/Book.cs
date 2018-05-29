@@ -13,7 +13,7 @@ namespace WpfApp1
         string author;
         string genre;
         string imgPuth;
-        string filePuth;
+        public string filePuth;
 
 
         public Book(string name,string author,string genre,string imgputh,string fileputh)
