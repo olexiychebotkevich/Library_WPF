@@ -37,7 +37,6 @@ namespace WpfApp1
 
             
 
-
         }
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)

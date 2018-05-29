@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace WpfApp1
 {
    
-   public  class Book
+    public class Book
     {
         string name;
         string author;
