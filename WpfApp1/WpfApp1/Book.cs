@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace WpfApp1
 {
    
-    class Book
+   public  class Book
     {
         string name;
         string author;
@@ -24,6 +24,12 @@ namespace WpfApp1
             this.imgPuth = imgputh;
             this.filePuth = fileputh;
             
+        }
+
+
+        public Book()
+        {
+
         }
 
 

@@ -13,10 +13,10 @@
         </Grid.RowDefinitions>
             <WrapPanel Grid.Row="0" >
             <Menu Height="20" Width="800">
-                <MenuItem Width="50" Height="20"  Header="Add" />
+                <MenuItem Width="50" Height="20"  Header="Add" Click="AddBook_Click" />
             </Menu>
         </WrapPanel>
-        <ListView Grid.Row="1" Name="ListView1">
+        <ListView Grid.Row="1" Name="ListView1" SelectionChanged="ListView1_SelectionChanged" MouseDoubleClick="ListView1_MouseDoubleClick">
         </ListView>
     </Grid>
 </Window>

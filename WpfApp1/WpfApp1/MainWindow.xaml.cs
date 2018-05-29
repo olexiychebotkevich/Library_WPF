@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,8 +21,8 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
-        List<string> genre = new List<string>();
-        
+        ObservableCollection<string> genre = new ObservableCollection<string>();
+        Book book = new Book();
         public MainWindow()
         {
             InitializeComponent();
@@ -37,6 +38,34 @@ namespace WpfApp1
             
 
 
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void AddBook_Click(object sender, RoutedEventArgs e)
+        {
+
+            Add_Book_Viev addb = new Add_Book_Viev();
+            addb.ShowDialog();
+            if(addb._book!=null)
+            {
+                book = addb._book;
+                ListView1.Items.Add(book);
+            }
+
+        }
+
+        private void ListView1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+          
+        }
+
+        private void ListView1_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            ReaderView rw = new ReaderView(book);
         }
     }
 }
