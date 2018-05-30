@@ -88,5 +88,11 @@ namespace WpfApp1
 
             }
         }
+
+        private void MenuItem_Click_2(object sender, RoutedEventArgs e)
+        {
+            if(view.SelectedItems.Count>0)
+            books.RemoveAt(view.SelectedIndex);
+        }
     }
 }
