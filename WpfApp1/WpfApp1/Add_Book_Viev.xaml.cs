@@ -41,6 +41,8 @@ namespace WpfApp1
             else
             {
                 _book = new Book(Name.Text, Author.Text, Genre.SelectedItem.ToString(), image, file);
+                this.Close();
+
             }
         }
 

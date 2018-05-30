@@ -81,7 +81,7 @@ namespace WpfApp1
         {
             //if(sender is Book)
             {
-                Book b = sender as Book;
+                Book b = view.SelectedItem as Book;
 
                 ReaderView rw = new ReaderView(b.filePuth);
                 rw.ShowDialog();
