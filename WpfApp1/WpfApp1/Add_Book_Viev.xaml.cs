@@ -52,7 +52,7 @@ namespace WpfApp1
             //ofd.ShowDialog();
             if (true == ofd.ShowDialog())
             {
-                if(ofd.FileName.Contains(".jpg")||ofd.FileName.Contains(".png"))
+                if(ofd.FileName.Contains(".jpg")||ofd.FileName.Contains(".png") || ofd.FileName.Contains(".jpeg") || ofd.FileName.Contains(".JPG"))
                 image = ofd.FileName;
             }
         }
