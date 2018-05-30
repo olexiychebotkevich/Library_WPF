@@ -21,22 +21,12 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
-        ObservableCollection<string> genre = new ObservableCollection<string>();
+       
         Book book = new Book();
         public MainWindow()
         {
             InitializeComponent();
-            genre.Add("novel");
-            genre.Add("story");
-            genre.Add("short story");
-            genre.Add("epic");
-            genre.Add("tale");
-            genre.Add("fable");
-            genre.Add("legend");
-            genre.Add("novelette");
-
             
-
         }
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
@@ -52,7 +42,7 @@ namespace WpfApp1
             if(addb._book!=null)
             {
                 book = addb._book;
-                ListView1.Items.Add(book);
+                view.Items.Add(book);
             }
 
         }

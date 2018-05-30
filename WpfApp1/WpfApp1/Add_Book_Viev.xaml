@@ -30,6 +30,5 @@
         <Button Click="Add_Image_Click" Grid.Column="1" Grid.Row="3" Content="Add Image" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <Button Click="Add_File_Click" Grid.Column="1" Grid.Row="4" Content="Add File" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <Button Grid.Column="0" Grid.Row="5" Width="80" Content="Ok" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button_Click"/>
-        <Button Grid.Column="1" Grid.Row="5" Width="100" Content="Exit" HorizontalAlignment="Center" VerticalAlignment="Center"/>
     </Grid>
 </Window>

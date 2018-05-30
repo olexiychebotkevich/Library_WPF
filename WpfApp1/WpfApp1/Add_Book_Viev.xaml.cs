@@ -23,12 +23,26 @@ namespace WpfApp1
     public partial class Add_Book_Viev : Window
     {
         public Book _book;
-        string image;
-        string file;
+        string image = null;
+        string file = null;
+        // ObservableCollection<string> genre = new ObservableCollection<string>();
+        List<string> genre = new List<string>();
+
         public Add_Book_Viev()
         {
             InitializeComponent();
-            
+            genre.Add("novel");
+            genre.Add("story");
+            genre.Add("short story");
+            genre.Add("epic");
+            genre.Add("tale");
+            genre.Add("fable");
+            genre.Add("legend");
+            genre.Add("novelette");
+
+            Genre.ItemsSource = genre;
+                
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -40,6 +54,7 @@ namespace WpfApp1
             else
             {
                 _book = new Book(Name.Text, Author.Text, Genre.SelectedItem.ToString(), image, file);
+                this.Close();
             }
         }
 
