@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid >
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>
             <RowDefinition/>
@@ -16,15 +16,15 @@
         <MenuItem Width="50" Height="20"  Header="Add" Click="AddBook_Click"   />
         </Menu>
 
-        <ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled" Name="view" HorizontalContentAlignment="Center" Grid.Row="1">
-            <ListView.ItemsPanel>
+        <ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled" Name="view" HorizontalContentAlignment="Center" Grid.Row="1" MouseDoubleClick="view_MouseDoubleClick">
+            <ListView.ItemsPanel >
                 <ItemsPanelTemplate>
                     <WrapPanel HorizontalAlignment="Center"></WrapPanel>
                 </ItemsPanelTemplate>
             </ListView.ItemsPanel>
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel Margin="5" Background="Aqua" Height="350" Width="275">
+            <ListView.ItemTemplate  >
+                <DataTemplate  >
+                    <StackPanel Margin="5" Background="Aqua" Height="350" Width="275"  >
                         <Image HorizontalAlignment="Center" Source="{Binding Path=imgPuth}" Height="250" Width="250" />
                         <TextBlock HorizontalAlignment="Center" FontSize="30"  Text="{ Binding Path=name}"/>
                         <TextBlock HorizontalAlignment="Center" FontSize="25" Text="{Binding Path=author}"/>

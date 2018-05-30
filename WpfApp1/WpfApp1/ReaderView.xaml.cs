@@ -22,10 +22,17 @@ namespace WpfApp1
     public partial class ReaderView : Window
     {
         string b;
+        string text;
         public ReaderView(string book)
         {       
             InitializeComponent();
             b = book;
+            using (System.IO.StreamReader sr = new System.IO.StreamReader(b, Encoding.Default))
+            {
+                TextBox1.Text = sr.ReadToEnd();
+            }
+
+
         }
 
 

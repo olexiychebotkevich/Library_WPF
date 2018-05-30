@@ -76,5 +76,17 @@ namespace WpfApp1
         {
 
         }
+
+        private void view_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            //if(sender is Book)
+            {
+                Book b = sender as Book;
+
+                ReaderView rw = new ReaderView(b.filePuth);
+                rw.ShowDialog();
+
+            }
+        }
     }
 }
