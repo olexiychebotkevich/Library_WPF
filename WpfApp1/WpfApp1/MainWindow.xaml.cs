@@ -23,7 +23,8 @@ namespace WpfApp1
     public partial class MainWindow : Window
     {
         List<string> genre = new List<string>();
-        Book book = new Book();
+        public   Book book = new Book();
+        ObservableCollection<Book> books =new ObservableCollection<Book>();
         public MainWindow()
         {
             InitializeComponent();
@@ -35,8 +36,9 @@ namespace WpfApp1
             genre.Add("fable");
             genre.Add("legend");
             genre.Add("novelette");
+            view.ItemsSource = books;
 
-            
+
 
         }
 
@@ -50,9 +52,12 @@ namespace WpfApp1
 
             Add_Book_Viev addb = new Add_Book_Viev(genre);
             addb.ShowDialog();
-
+            if (addb._book != null)
+            {
                 book = addb._book;
-                view.Items.Add(book);
+                books.Add(book);
+            }
+           
            
 
         }

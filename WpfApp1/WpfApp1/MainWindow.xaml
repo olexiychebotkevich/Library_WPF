@@ -12,7 +12,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         
-        <Menu Height="20" Width="800" Grid.Row="0">
+        <Menu Grid.ColumnSpan="1" Grid.Row="0">
         <MenuItem Width="50" Height="20"  Header="Add" Click="AddBook_Click"   />
         </Menu>
 
@@ -25,10 +25,10 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Margin="5" Background="Aqua" Height="350" Width="275">
-                        <Image HorizontalAlignment="Center" Source="{Binding Path=ImagePath}" Height="250" Width="250" />
-                        <TextBlock HorizontalAlignment="Center" FontSize="30" Text="{Binding Path=Name}"/>
-                        <TextBlock HorizontalAlignment="Center" FontSize="25" Text="{Binding Path=Author}"/>
-                        <TextBlock IsEnabled="False" HorizontalAlignment="Center"  Text="{Binding Path=Genre}"/>
+                        <Image HorizontalAlignment="Center" Source="{Binding Path=imgPuth}" Height="250" Width="250" />
+                        <TextBlock HorizontalAlignment="Center" FontSize="30"  Text="{ Binding Path=name}"/>
+                        <TextBlock HorizontalAlignment="Center" FontSize="25" Text="{Binding Path=author}"/>
+                        <TextBlock IsEnabled="False" HorizontalAlignment="Center" FontSize="25"  Text="{Binding Path=genre}"/>
                        
                     </StackPanel>
                 </DataTemplate>

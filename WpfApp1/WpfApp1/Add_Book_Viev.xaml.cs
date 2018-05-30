@@ -47,9 +47,10 @@ namespace WpfApp1
         private void Add_Image_Click(object sender, RoutedEventArgs e)
         {
             Microsoft.Win32.OpenFileDialog ofd = new Microsoft.Win32.OpenFileDialog();
-            ofd.ShowDialog();
+            //ofd.ShowDialog();
             if (true == ofd.ShowDialog())
             {
+                if(ofd.FileName.Contains(".jpg")||ofd.FileName.Contains(".png"))
                 image = ofd.FileName;
             }
         }
@@ -57,10 +58,11 @@ namespace WpfApp1
         private void Add_File_Click(object sender, RoutedEventArgs e)
         {
             Microsoft.Win32.OpenFileDialog ofd = new Microsoft.Win32.OpenFileDialog();
-            ofd.ShowDialog();
+            //ofd.ShowDialog();
             if(true == ofd.ShowDialog())
             {
-                file = ofd.FileName;
+                if (ofd.FileName.Contains(".txt") )
+                    file = ofd.FileName;
             }
         }
     }
