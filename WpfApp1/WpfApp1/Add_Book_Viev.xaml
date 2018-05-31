@@ -19,16 +19,16 @@
             <ColumnDefinition Width="100"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Label Grid.Row="0" Content="Name" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <Label Grid.Row="1" Content="Author" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <Label Grid.Row="2" Content="Genre" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <Label Grid.Row="3" Content="Image" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <Label Grid.Row="4" Content="File" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBox Name="Name" Grid.Column="1" Grid.Row="0" Width="150" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBox Name="Author" Grid.Column="1" Grid.Row="1" Width="150" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <ComboBox Name="Genre" Grid.Column="1" Grid.Row="2" Width="150" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <Button Click="Add_Image_Click" Grid.Column="1" Grid.Row="3" Content="Add Image" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <Button Click="Add_File_Click" Grid.Column="1" Grid.Row="4" Content="Add File" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <Button Grid.Column="0" Grid.Row="5" Width="80" Content="Ok" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button_Click"/>
+        <Label Style="{DynamicResource LabelStyle}" Grid.Row="0" Content="Name"/>
+        <Label Style="{DynamicResource LabelStyle}" Grid.Row="1" Content="Author"/>
+        <Label Style="{DynamicResource LabelStyle}" Grid.Row="2" Content="Genre"/>
+        <Label Style="{DynamicResource LabelStyle}" Grid.Row="3" Content="Image"/>
+        <Label Style="{DynamicResource LabelStyle}" Grid.Row="4" Content="File"/>
+        <TextBox Style="{DynamicResource TextboxStyle}" Name="Name" Grid.Column="1" Grid.Row="0"/>
+        <TextBox Style="{DynamicResource TextboxStyle}" Name="Author" Grid.Column="1" Grid.Row="1" Width="150"/>
+        <ComboBox Style="{DynamicResource ComboBoxStyle}" Name="Genre" Grid.Column="1" Grid.Row="2" Width="150"/>
+        <Button Style="{DynamicResource ButtonStyle}" Click="Add_Image_Click" Grid.Column="1" Grid.Row="3" Content="Add Image"/>
+        <Button Style="{DynamicResource ButtonStyle}" Click="Add_File_Click" Grid.Column="1" Grid.Row="4" Content="Add File"/>
+        <Button Style="{DynamicResource ButtonStyle}" Grid.Column="0" Grid.Row="5" Content="Ok" Click="Button_Click"/>
     </Grid>
 </Window>

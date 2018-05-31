@@ -28,6 +28,7 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
+            //this.Resources.MergedDictionaries.Add(new ResourceDictionary() { Source = new Uri("DictionaryClassic.xaml", UriKind.Relative) });
             genre.Add("novel");
             genre.Add("story");
             genre.Add("short story");
