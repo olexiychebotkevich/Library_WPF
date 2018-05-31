@@ -3,7 +3,7 @@
                     xmlns:local="clr-namespace:WpfApp1">
     <LinearGradientBrush x:Key="PolandBrush" StartPoint="0,0" EndPoint="0,1" >
         <GradientStop Color="Black" Offset="0.5"></GradientStop>
-        <GradientStop Color="Gray" Offset="1"></GradientStop>
+        <GradientStop Color="Red" Offset="1"></GradientStop>
     </LinearGradientBrush>
 
     <LinearGradientBrush x:Key="RevPolandBrush" StartPoint="0,0" EndPoint="0,1" >
@@ -75,4 +75,13 @@
         <Setter Property="Foreground" Value="{StaticResource RevGreyBrush}"/>
         <Setter Property="Width" Value="150"/>
     </Style>
+
+    <DataTemplate x:Key="ListDataTemplate">
+        <StackPanel Style="{DynamicResource PanelStyle}">
+            <Image Style="{DynamicResource ImageStyle}" Source="{Binding Path=imgPuth}"/>
+            <TextBlock Style="{DynamicResource TextBlockStyle}" Text="{ Binding Path=name}"/>
+            <TextBlock Style="{DynamicResource TextBlockStyle}" Text="{Binding Path=author}"/>
+            <TextBlock Style="{DynamicResource TextBlockStyle}" IsEnabled="False" Text="{Binding Path=genre}"/>
+        </StackPanel>
+    </DataTemplate>
 </ResourceDictionary>

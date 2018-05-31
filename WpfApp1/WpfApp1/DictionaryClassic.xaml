@@ -56,8 +56,7 @@
 
     <Style  x:Key="MenuItemStyle" TargetType="MenuItem">
         <Setter Property="HorizontalAlignment" Value="Center"/>
-        <Setter Property="Height" Value="20"/>
-        <Setter Property="Width" Value="50"/>
+        <Setter Property="Background" Value="{StaticResource GreyBrush}"/>
     </Style>
 
     <Style  x:Key="LabelStyle" TargetType="Label">
@@ -75,5 +74,14 @@
         <Setter Property="Foreground" Value="{StaticResource RevGreyBrush}"/>
         <Setter Property="Width" Value="150"/>
     </Style>
-    
+
+    <DataTemplate x:Key="ListDataTemplate">
+        <StackPanel Style="{DynamicResource PanelStyle}">
+            <Image Style="{DynamicResource ImageStyle}" Source="{Binding Path=imgPuth}"/>
+            <TextBlock Style="{DynamicResource TextBlockStyle}" Text="{ Binding Path=name}"/>
+            <TextBlock Style="{DynamicResource TextBlockStyle}" Text="{Binding Path=author}"/>
+            <TextBlock Style="{DynamicResource TextBlockStyle}" IsEnabled="False" Text="{Binding Path=genre}"/>
+        </StackPanel>
+    </DataTemplate>
+
 </ResourceDictionary>

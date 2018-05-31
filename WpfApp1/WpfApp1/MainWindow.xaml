@@ -18,22 +18,13 @@
             <MenuItem Style="{DynamicResource MenuItemStyle}" Header="Genre" Click="MenuItem_Click_2"/>
         </Menu>
 
-        <ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled" Name="view" HorizontalContentAlignment="Center" Grid.Row="1" MouseDoubleClick="view_MouseDoubleClick">
+        <ListView ItemTemplate="{DynamicResource ListDataTemplate}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Name="view" HorizontalContentAlignment="Center" Grid.Row="1" MouseDoubleClick="view_MouseDoubleClick">
             <ListView.ItemsPanel>
                 <ItemsPanelTemplate>
                     <WrapPanel HorizontalAlignment="Left"></WrapPanel>
                 </ItemsPanelTemplate>
             </ListView.ItemsPanel>
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel Style="{DynamicResource PanelStyle}">
-                        <Image Style="{DynamicResource ImageStyle}" Source="{Binding Path=imgPuth}"/>
-                        <TextBlock Style="{DynamicResource TextBlockStyle}" Text="{ Binding Path=name}"/>
-                        <TextBlock Style="{DynamicResource TextBlockStyle}" Text="{Binding Path=author}"/>
-                        <TextBlock Style="{DynamicResource TextBlockStyle}" IsEnabled="False" Text="{Binding Path=genre}"/>
-                    </StackPanel>
-                </DataTemplate>
-            </ListView.ItemTemplate>
+            
         </ListView>
     </Grid>
 </Window>
