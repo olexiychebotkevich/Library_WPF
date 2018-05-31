@@ -9,10 +9,10 @@ namespace WpfApp1
    
     public class Book
     {
-        string name;
-        string author;
-        string genre;
-        string imgPuth;
+        public string name { get; set; }
+        public string author { get; set; }
+        public string genre { get; set; }
+        public string imgPuth { get; set; }
         public string filePuth;
 
 

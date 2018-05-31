@@ -7,6 +7,6 @@
         mc:Ignorable="d"
         Title="ReaderView" Height="450" Width="800">
     <Grid>
-        <TextBox Height="420" Width="800"/>
+        <TextBox Height="420" Width="800" Name="TextBox1"/>
     </Grid>
 </Window>

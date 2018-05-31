@@ -23,26 +23,13 @@ namespace WpfApp1
     public partial class Add_Book_Viev : Window
     {
         public Book _book;
-        string image = null;
-        string file = null;
-        // ObservableCollection<string> genre = new ObservableCollection<string>();
-        List<string> genre = new List<string>();
-
-        public Add_Book_Viev()
+        string image;
+        string file;
+        public Add_Book_Viev(List<string> genre )
         {
             InitializeComponent();
-            genre.Add("novel");
-            genre.Add("story");
-            genre.Add("short story");
-            genre.Add("epic");
-            genre.Add("tale");
-            genre.Add("fable");
-            genre.Add("legend");
-            genre.Add("novelette");
-
             Genre.ItemsSource = genre;
-                
-
+            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -55,15 +42,17 @@ namespace WpfApp1
             {
                 _book = new Book(Name.Text, Author.Text, Genre.SelectedItem.ToString(), image, file);
                 this.Close();
+
             }
         }
 
         private void Add_Image_Click(object sender, RoutedEventArgs e)
         {
             Microsoft.Win32.OpenFileDialog ofd = new Microsoft.Win32.OpenFileDialog();
-            ofd.ShowDialog();
+            //ofd.ShowDialog();
             if (true == ofd.ShowDialog())
             {
+                if(ofd.FileName.Contains(".jpg")||ofd.FileName.Contains(".png") || ofd.FileName.Contains(".jpeg") || ofd.FileName.Contains(".JPG"))
                 image = ofd.FileName;
             }
         }
@@ -71,10 +60,11 @@ namespace WpfApp1
         private void Add_File_Click(object sender, RoutedEventArgs e)
         {
             Microsoft.Win32.OpenFileDialog ofd = new Microsoft.Win32.OpenFileDialog();
-            ofd.ShowDialog();
+            //ofd.ShowDialog();
             if(true == ofd.ShowDialog())
             {
-                file = ofd.FileName;
+                if (ofd.FileName.Contains(".txt") )
+                    file = ofd.FileName;
             }
         }
     }
