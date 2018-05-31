@@ -15,7 +15,12 @@
         <Menu Grid.ColumnSpan="1" Grid.Row="0">
             <MenuItem Style="{DynamicResource MenuItemStyle}" Header="Add" Click="AddBook_Click"/>
             <MenuItem Style="{DynamicResource MenuItemStyle}" Header="Remove" Click="MenuItem_Click_2"/>
-            <MenuItem Style="{DynamicResource MenuItemStyle}" Header="Genre" Click="MenuItem_Click_2"/>
+            <MenuItem Style="{DynamicResource MenuItemStyle}" Header="Genre" Click="MenuItem_Click_3">
+                <ComboBox Name="ComboBox1" SelectionChanged="ComboBox1_SelectionChanged"/>
+            </MenuItem>
+            <MenuItem Style="{DynamicResource MenuItemStyle}" Header="Styles" >
+                <ComboBox Name="ComboBox2" SelectionChanged="ComboBox2_SelectionChanged"/>
+            </MenuItem>
         </Menu>
 
         <ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled" Name="view" HorizontalContentAlignment="Center" Grid.Row="1" MouseDoubleClick="view_MouseDoubleClick">

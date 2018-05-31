@@ -25,6 +25,7 @@ namespace WpfApp1
         List<string> genre = new List<string>();
         public   Book book = new Book();
         ObservableCollection<Book> books =new ObservableCollection<Book>();
+        ObservableCollection<Book> _books = new ObservableCollection<Book>();
         public MainWindow()
         {
             InitializeComponent();
@@ -38,6 +39,23 @@ namespace WpfApp1
             genre.Add("legend");
             genre.Add("novelette");
             view.ItemsSource = books;
+
+            ComboBox1.Items.Add("All");
+            ComboBox1.Items.Add("novel");
+            ComboBox1.Items.Add("story");
+            ComboBox1.Items.Add("short story");
+            ComboBox1.Items.Add("epic");
+            ComboBox1.Items.Add("tale");
+            ComboBox1.Items.Add("fable");
+            ComboBox1.Items.Add("legend");
+            ComboBox1.Items.Add("novelette");
+
+
+            ComboBox2.Items.Add("Classic");
+            ComboBox2.Items.Add("Modern");
+
+
+
 
 
 
@@ -92,8 +110,59 @@ namespace WpfApp1
 
         private void MenuItem_Click_2(object sender, RoutedEventArgs e)
         {
-            if(view.SelectedItems.Count>0)
-            books.RemoveAt(view.SelectedIndex);
+            if (view.SelectedItems.Count > 0)
+
+            {
+                if (_books.Count == 0)
+                    books.RemoveAt(view.SelectedIndex);
+                else
+                {
+                    books.RemoveAt(view.SelectedIndex);
+                    _books.RemoveAt(view.SelectedIndex);
+                }
+
+            }
+        }
+
+        private void MenuItem_Click_3(object sender, RoutedEventArgs e)
+        {
+          
+            
+        }
+
+        private void ComboBox1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (books.Count > 0)
+            {
+
+                _books.Clear();
+                if (ComboBox1.SelectedItem.ToString() == "All")
+                    view.ItemsSource = books;
+                else
+                {
+
+                    foreach (Book i in books)
+                    {
+                        if (i.genre == ComboBox1.SelectedItem.ToString())
+                            _books.Add(i);
+                    }
+                    view.ItemsSource = _books;
+
+
+                }
+            }
+        }
+
+        private void ComboBox2_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            this.Resources.Clear();
+            if(ComboBox2.SelectedItem.ToString()== "Classic")
+            this.Resources.MergedDictionaries.Add(new ResourceDictionary() { Source = new Uri("DictionaryClassic.xaml", UriKind.Relative) });
+            else
+            {
+                this.Resources.MergedDictionaries.Add(new ResourceDictionary() { Source = new Uri("DictionaryModern.xaml", UriKind.Relative) });
+            }
+
         }
     }
 }
