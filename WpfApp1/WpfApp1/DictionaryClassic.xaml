@@ -83,5 +83,7 @@
             <TextBlock Style="{DynamicResource TextBlockStyle}" IsEnabled="False" Text="{Binding Path=genre}"/>
         </StackPanel>
     </DataTemplate>
+    
+    <!--comment-->
 
 </ResourceDictionary>
