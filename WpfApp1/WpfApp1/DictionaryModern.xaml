@@ -11,7 +11,16 @@
         <GradientStop Color="LightBlue" Offset="1"></GradientStop>
     </LinearGradientBrush>
 
+    <!--<LinearGradientBrush x:Key="ListViewCollor_Modern" StartPoint="0,0" EndPoint="0,1" >
+        <GradientStop Color="Aqua" Offset="0"></GradientStop>
+        <GradientStop Color="LightBlue" Offset="1"></GradientStop>
+    </LinearGradientBrush>-->
 
+
+    <!--<LinearGradientBrush x:Key="ListViewCollor_Classic" StartPoint="0,0" EndPoint="0,1" >
+        <GradientStop Color="Aqua" Offset="0"></GradientStop>
+        <GradientStop Color="LightBlue" Offset="1"></GradientStop>
+    </LinearGradientBrush>-->
 
     <Style x:Key="ButtonStyle" TargetType="Button">
         <Setter Property="FontSize" Value="14"/>
@@ -22,6 +31,8 @@
         <!--<Setter Property="Height" Value="100"/>-->
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="FontStyle" Value="Italic"/>
     </Style>
 
     <Style x:Key="TextBlockStyle" TargetType="TextBlock">
@@ -65,6 +76,8 @@
         <Setter Property="Height" Value="50"/>
         <Setter Property="Width" Value="70"/>
         <Setter Property="Margin" Value="3"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="FontStyle" Value="Italic"/>
     </Style>
 
     <Style x:Key="ComboBoxStyle" TargetType="ComboBox">
@@ -81,7 +94,7 @@
             <TextBlock Style="{DynamicResource TextBlockStyle}" Text="{ Binding Path=name}"/>
             <TextBlock Style="{DynamicResource TextBlockStyle}" Text="{Binding Path=author}"/>
             <TextBlock Style="{DynamicResource TextBlockStyle}" IsEnabled="False" Text="{Binding Path=genre}"/>
-            <Image  Source="{Binding Path=imgPuth}"/>
+            <Image Height="220" Width="220"  Source="{Binding Path=imgPuth}"/>
           
 
         </StackPanel>
