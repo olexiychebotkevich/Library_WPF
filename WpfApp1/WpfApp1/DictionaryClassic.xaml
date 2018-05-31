@@ -76,7 +76,7 @@
     </Style>
 
     <DataTemplate x:Key="ListDataTemplate">
-        <StackPanel Style="{DynamicResource PanelStyle}">
+        <StackPanel Style="{DynamicResource PanelStyle}" >
             <Image Style="{DynamicResource ImageStyle}" Source="{Binding Path=imgPuth}"/>
             <TextBlock Style="{DynamicResource TextBlockStyle}" Text="{ Binding Path=name}"/>
             <TextBlock Style="{DynamicResource TextBlockStyle}" Text="{Binding Path=author}"/>
@@ -84,6 +84,6 @@
         </StackPanel>
     </DataTemplate>
     
-    <!--comment-->
+    
 
 </ResourceDictionary>

@@ -98,14 +98,16 @@ namespace WpfApp1
 
         private void view_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            //if(sender is Book)
-            {
+         
+            
                 Book b = view.SelectedItem as Book;
+                if (b.filePuth != null)
+                {
+                    ReaderView rw = new ReaderView(b.filePuth);
+                    rw.ShowDialog();
+                }
 
-                ReaderView rw = new ReaderView(b.filePuth);
-                rw.ShowDialog();
-
-            }
+            
         }
 
         private void MenuItem_Click_2(object sender, RoutedEventArgs e)
@@ -144,6 +146,7 @@ namespace WpfApp1
                     foreach (Book i in books)
                     {
                         if (i.genre == ComboBox1.SelectedItem.ToString())
+                            
                             _books.Add(i);
                     }
                     view.ItemsSource = _books;
@@ -155,12 +158,14 @@ namespace WpfApp1
 
         private void ComboBox2_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            this.Resources.Clear();
-            if(ComboBox2.SelectedItem.ToString()== "Classic")
-            this.Resources.MergedDictionaries.Add(new ResourceDictionary() { Source = new Uri("DictionaryClassic.xaml", UriKind.Relative) });
+            System.Windows.Application.Current.Resources.Clear();
+            if (ComboBox2.SelectedItem.ToString() == "Classic")
+            {
+                System.Windows.Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary() { Source = new Uri("DictionaryClassic.xaml", UriKind.Relative) });
+            }
             else
             {
-                this.Resources.MergedDictionaries.Add(new ResourceDictionary() { Source = new Uri("DictionaryModern.xaml", UriKind.Relative) });
+                System.Windows.Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary() { Source = new Uri("DictionaryModern.xaml", UriKind.Relative) });
             }
 
         }
