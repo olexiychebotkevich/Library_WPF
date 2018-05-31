@@ -23,7 +23,7 @@
             </MenuItem>
         </Menu>
 
-        <ListView ItemTemplate="{DynamicResource ListDataTemplate}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Name="view" HorizontalContentAlignment="Center" Grid.Row="1" MouseDoubleClick="view_MouseDoubleClick">
+        <ListView ItemTemplate="{DynamicResource ListDataTemplate} " ScrollViewer.HorizontalScrollBarVisibility="Disabled" Name="view" HorizontalContentAlignment="Center" Grid.Row="1" MouseDoubleClick="view_MouseDoubleClick">
             <ListView.ItemsPanel>
                 <ItemsPanelTemplate>
                     <WrapPanel HorizontalAlignment="Left"></WrapPanel>
