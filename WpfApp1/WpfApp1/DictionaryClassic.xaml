@@ -74,5 +74,14 @@
         <Setter Property="Foreground" Value="{StaticResource RevGreyBrush}"/>
         <Setter Property="Width" Value="150"/>
     </Style>
-    
+
+    <DataTemplate x:Key="ListDataTemplate">
+        <StackPanel Style="{DynamicResource PanelStyle}">
+            <Image Style="{DynamicResource ImageStyle}" Source="{Binding Path=imgPuth}"/>
+            <TextBlock Style="{DynamicResource TextBlockStyle}" Text="{ Binding Path=name}"/>
+            <TextBlock Style="{DynamicResource TextBlockStyle}" Text="{Binding Path=author}"/>
+            <TextBlock Style="{DynamicResource TextBlockStyle}" IsEnabled="False" Text="{Binding Path=genre}"/>
+        </StackPanel>
+    </DataTemplate>
+
 </ResourceDictionary>
