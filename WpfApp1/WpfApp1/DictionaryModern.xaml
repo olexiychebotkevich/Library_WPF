@@ -11,6 +11,10 @@
         <GradientStop Color="LightBlue" Offset="1"></GradientStop>
     </LinearGradientBrush>
 
+   
+
+
+
     <!--<LinearGradientBrush x:Key="ListViewCollor_Modern" StartPoint="0,0" EndPoint="0,1" >
         <GradientStop Color="Aqua" Offset="0"></GradientStop>
         <GradientStop Color="LightBlue" Offset="1"></GradientStop>
@@ -67,7 +71,10 @@
 
     <Style  x:Key="MenuItemStyle" TargetType="MenuItem">
         <Setter Property="HorizontalAlignment" Value="Center"/>
+       
+        <Setter Property="TextBlock.Background" Value="DarkBlue"/>
         
+
     </Style>
 
     <Style  x:Key="LabelStyle" TargetType="Label">
@@ -88,15 +95,33 @@
         <Setter Property="Width" Value="150"/>
     </Style>
 
-    <DataTemplate x:Key="ListDataTemplate" >
-        <StackPanel Style="{DynamicResource PanelStyle}">
-           
-            <TextBlock Style="{DynamicResource TextBlockStyle}" Text="{ Binding Path=name}"/>
-            <TextBlock Style="{DynamicResource TextBlockStyle}" Text="{Binding Path=author}"/>
-            <TextBlock Style="{DynamicResource TextBlockStyle}" IsEnabled="False" Text="{Binding Path=genre}"/>
-            <Image Height="220" Width="220"  Source="{Binding Path=imgPuth}"/>
-          
 
-        </StackPanel>
+    <Style  x:Key="MenuStyle" TargetType="Menu">
+        <Setter Property="Background" Value="DarkBlue"/>
+
+    </Style>
+
+  
+
+    <Style x:Key="ListViewStyle" TargetType="ListView" >
+        <Setter Property="Background" Value="White"/>
+    </Style>
+
+    <DataTemplate x:Key="ListDataTemplate" >
+
+        <Grid Width="200" Height="160">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Image Style="{DynamicResource ImageStyle}" Source="{Binding Path=imgPuth}" Grid.RowSpan="3" Width="200" Height="160" Stretch="Fill"/>
+            <TextBlock Style="{DynamicResource TextBlockStyle}" Text="{ Binding Path=name}" Grid.Row="0"/>
+            <TextBlock Style="{DynamicResource TextBlockStyle}" Text="{Binding Path=author}" Grid.Row="1"/>
+            <TextBlock Style="{DynamicResource TextBlockStyle}" IsEnabled="False" Text="{Binding Path=genre}" Grid.Row="2"/>
+
+        </Grid>
+
     </DataTemplate>
 </ResourceDictionary>

@@ -12,7 +12,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Menu Grid.ColumnSpan="1" Grid.Row="0">
+        <Menu Grid.ColumnSpan="1" Grid.Row="0" Style="{StaticResource MenuStyle}"  >
             <MenuItem Style="{DynamicResource MenuItemStyle}" Header="Add" Click="AddBook_Click"/>
             <MenuItem Style="{DynamicResource MenuItemStyle}" Header="Remove" Click="MenuItem_Click_2"/>
             <MenuItem Style="{DynamicResource MenuItemStyle}" Header="Genre" Click="MenuItem_Click_3">
@@ -23,7 +23,7 @@
             </MenuItem>
         </Menu>
 
-        <ListView ItemTemplate="{DynamicResource ListDataTemplate}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Name="view" HorizontalContentAlignment="Center" Grid.Row="1" MouseDoubleClick="view_MouseDoubleClick">
+        <ListView Style="{StaticResource ListViewStyle}" ItemTemplate="{DynamicResource ListDataTemplate}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Name="view" HorizontalContentAlignment="Center" Grid.Row="1" MouseDoubleClick="view_MouseDoubleClick">
             <ListView.ItemsPanel>
                 <ItemsPanelTemplate>
                     <WrapPanel HorizontalAlignment="Left"></WrapPanel>

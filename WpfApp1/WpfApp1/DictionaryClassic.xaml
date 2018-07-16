@@ -13,12 +13,17 @@
 
 
 
+    <LinearGradientBrush x:Key="PinkViolet" StartPoint="0,0" EndPoint="0,1" >
+        <GradientStop Color="Pink" Offset="0"></GradientStop>
+        <GradientStop Color="Violet" Offset="1"></GradientStop>
+    </LinearGradientBrush>
+
     <Style x:Key="ButtonStyle" TargetType="Button">
         <Setter Property="FontSize" Value="14"/>
         <!--<Setter Property="FontFamily" Value="Comic Sans MS"/>-->
         <Setter Property="Margin" Value="4,4,4,4"/>
-        <Setter Property="Background" Value="{StaticResource GreyBrush}"/>
-        <Setter Property="Foreground" Value="{StaticResource RevGreyBrush}"/>
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="Foreground" Value="Black"/>
         <!--<Setter Property="Height" Value="100"/>-->
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
@@ -41,7 +46,7 @@
     </Style>
 
     <Style  x:Key="PanelStyle" TargetType="StackPanel">
-        <Setter Property="Background" Value="{StaticResource GreyBrush}"/>
+        <Setter Property="Background" Value="White"/>
         <Setter Property="Margin" Value="3"/>
         <Setter Property="Height" Value="400"/>
         <Setter Property="Width" Value="275"/>
@@ -56,7 +61,9 @@
 
     <Style  x:Key="MenuItemStyle" TargetType="MenuItem">
         <Setter Property="HorizontalAlignment" Value="Center"/>
-        <Setter Property="Background" Value="{StaticResource GreyBrush}"/>
+        <Setter Property="Background" Value="#411717"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="FontSize" Value="13"/>
     </Style>
 
     <Style  x:Key="LabelStyle" TargetType="Label">
@@ -65,8 +72,10 @@
         <Setter Property="Height" Value="50"/>
         <Setter Property="Width" Value="70"/>
         <Setter Property="Margin" Value="3"/>
-        
-        
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="FontSize" Value="13"/>
+
+
     </Style>
 
     <Style x:Key="ComboBoxStyle" TargetType="ComboBox">
@@ -77,9 +86,20 @@
         <Setter Property="Width" Value="150"/>
     </Style>
 
+
+    <Style x:Key="ListViewStyle" TargetType="ListView" >
+        <Setter Property="Background" Value="#DCD5D5"/>
+    </Style>
+
+
+    <Style  x:Key="MenuStyle" TargetType="Menu">
+        <Setter Property="Background" Value="#411717"/>
+
+    </Style>
+    
     <DataTemplate x:Key="ListDataTemplate">
         <StackPanel Style="{DynamicResource PanelStyle}" >
-            <Image Style="{DynamicResource ImageStyle}" Source="{Binding Path=imgPuth}"/>
+            <Image Style="{DynamicResource ImageStyle}" Source="{Binding Path=imgPuth}" Width="180" Height="160" Stretch="Fill"/>
             <TextBlock Style="{DynamicResource TextBlockStyle}" Text="{ Binding Path=name}"/>
             <TextBlock Style="{DynamicResource TextBlockStyle}" Text="{Binding Path=author}"/>
             <TextBlock Style="{DynamicResource TextBlockStyle}" IsEnabled="False" Text="{Binding Path=genre}"/>

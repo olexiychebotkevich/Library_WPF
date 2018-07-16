@@ -115,13 +115,11 @@ namespace WpfApp1
             if (view.SelectedItems.Count > 0)
 
             {
-                if (_books.Count == 0)
-                    books.RemoveAt(view.SelectedIndex);
-                else
-                {
-                    books.RemoveAt(view.SelectedIndex);
-                    _books.RemoveAt(view.SelectedIndex);
-                }
+               
+                    books.Remove(view.SelectedItem as Book);
+           
+                    _books.Remove(view.SelectedItem as Book);
+                
 
             }
         }

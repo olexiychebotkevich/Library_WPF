@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="Add_Book_Viev" Height="300" Width="300">
-    <Grid>
+    <Grid Background="#411717">
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
